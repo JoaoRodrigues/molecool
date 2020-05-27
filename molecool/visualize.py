@@ -8,6 +8,10 @@ import matplotlib.pyplot as plt
 from .atom_data import atom_colors
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
+
+    if len(coordinates) != len(symbols):
+        raise ValueError('molecool.draw_molecule - unequal number of coordinates')
+
     # Create figure
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
