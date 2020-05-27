@@ -31,21 +31,3 @@ def test_calculate_angle():
 
    calculated_value = molecool.calculate_angle(r1, r2, r3, degrees=True)
    assert expected_value == calculated_value
-
-
-def test_build_bond_list():
-
-    coordinates = np.array([
-        [1, 1, 1],
-        [2.4, 1, 1],
-        [-0.4, 1, 1],
-        [1, 1, 2.4],
-        [1, 1, -0.4],
-    ])
-
-    bonds = molecool.build_bond_list(coordinates)
-
-    assert len(bonds) == 4
-
-    for bond_length in bonds.values():
-        assert bond_length == 1.4
