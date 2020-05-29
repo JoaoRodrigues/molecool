@@ -41,11 +41,7 @@ def calculate_molecular_mass(symbols):
         The mass of the molecule
     """
    
-    mass = 0
-    for atom in symbols:
-        mass += atom_weights[atom]
-
-    return mass
+    pass
 
 
 def calculate_center_of_mass(symbols, coordinates):
@@ -73,14 +69,5 @@ def calculate_center_of_mass(symbols, coordinates):
    
     """
 
-    total_mass = calculate_molecular_mass(symbols)
-
-    mass_array = np.zeros([len(symbols), 1])
-
-    for i in range(len(symbols)):
-        mass_array[i] = atom_weights[symbols[i]]
-
-    center_of_mass = sum(coordinates * mass_array) / total_mass
-
-    return center_of_mass
+    return np.array([])
 
