@@ -1,7 +1,6 @@
 import numpy as np
 
 from .measure import calculate_distance
-from .atom_data import atom_weights
 
 
 def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
